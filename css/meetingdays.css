@@ -1,0 +1,262 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow: hidden;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    position: relative;
+}
+
+#particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    padding: 0 20px;
+}
+
+p {
+    font-family: 'Ma Shan Zheng', cursive;
+    font-size: 2.5rem;
+    font-weight: bold;
+    -webkit-text-stroke: 1px #ffaaff;
+    -webkit-text-fill-color: papayawhip;
+    margin: 10px 0;
+    text-shadow: 0 0 10px rgba(255, 170, 255, 0.7);
+    opacity: 1;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+#text1 {
+    animation-delay: 0.5s;
+}
+
+#counter {
+    font-family: 'Ma Shan Zheng', cursive;
+    font-size: 4rem;
+    font-weight: bold;
+    -webkit-text-stroke: 2px #6b5b95;
+    -webkit-text-fill-color: #6b5b95;
+    text-shadow: 0 0 20px rgba(107, 91, 149, 0.8);
+    display: none;
+    margin: 20px 0 20px;
+    animation: pulse 2s ease-in-out infinite;
+    position: relative;
+    z-index: 5;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+#text2 {
+    animation-delay: 1s;
+    display: none;
+    position: relative;
+    z-index: 10;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.heart-container {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: visible;
+    z-index: 10;
+}
+
+#heartCanvas {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10px;
+}
+
+p.heart-text {
+    font-family: 'Ma Shan Zheng', cursive;
+    font-size: 1.2rem;
+    color: #c8a2c8 !important;
+    text-shadow: 0 0 10px rgba(200, 162, 200, 0.7), 0 0 20px rgba(200, 162, 200, 0.5), 0 0 30px rgba(200, 162, 200, 0.3);
+    margin: 10px 0 0 0;
+    z-index: 10;
+    text-align: center;
+    -webkit-text-stroke: 0.5px #c8a2c8 !important;
+    -webkit-text-fill-color: #c8a2c8 !important;
+}
+
+.memories {
+    position: absolute;
+    top: 200px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 600px;
+    z-index: 5;
+}
+
+.memory-card {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 30px;
+    padding: 25px;
+    margin: 15px 0;
+    box-shadow: 0 10px 40px rgba(31, 38, 135, 0.4);
+    position: relative;
+    overflow: hidden;
+}
+
+.memory-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, transparent, rgba(255, 170, 255, 0.8), transparent);
+    animation: bubbleGlow 2s ease-in-out infinite;
+}
+
+@keyframes bubbleGlow {
+    0%, 100% {
+        opacity: 0.5;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+@keyframes memoryFadeIn {
+    0% {
+        transform: translateY(50px) scale(0.8);
+        opacity: 0;
+    }
+    70% {
+        transform: translateY(-10px) scale(1.05);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes memoryFadeOut {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+    20% {
+        transform: translateY(-5px) scale(1.05);
+        opacity: 0.9;
+    }
+    40% {
+        transform: translateY(0) scale(1);
+        opacity: 0.7;
+    }
+    60% {
+        transform: translateY(2px) scale(0.95);
+        opacity: 0.5;
+    }
+    80% {
+        transform: translateY(5px) scale(0.9);
+        opacity: 0.3;
+    }
+    100% {
+        transform: translateY(10px) scale(0.8);
+        opacity: 0;
+    }
+}
+
+.memory-card p {
+    font-size: 1.5rem;
+    color: white;
+    -webkit-text-stroke: 0.5px #ff69b4;
+    margin: 0;
+    position: relative;
+    z-index: 1;
+}
+
+button {
+    display: none;
+    font-family: 'Ma Shan Zheng', cursive;
+    font-size: 1.5rem;
+    padding: 12px 30px;
+    border-radius: 50px;
+    background: linear-gradient(45deg, #ff6b6b, #ff8e53);
+    color: white;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    z-index: 10;
+}
+
+button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(255, 107, 107, 0.6);
+}
+
+button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.5s;
+}
+
+button:hover::before {
+    left: 100%;
+}
+
+@media (max-width: 768px) {
+    p {
+        font-size: 1.8rem;
+    }
+    
+    #counter {
+        font-size: 3rem;
+    }
+    
+    .memory-card p {
+        font-size: 1.2rem;
+    }
+    
+    button {
+        font-size: 1.2rem;
+        padding: 10px 25px;
+    }
+}

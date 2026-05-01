@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>火车之旅</title>
+    <link rel="stylesheet" href="../css/train.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=ZCOOL+QingKe+HuangYou&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- 火车效果容器 -->
+    <div class="container">
+        <div class="moon"></div>
+        <div class="cloud-container">
+            <div class="cloud"></div>
+            <div class="cloud"></div>
+            <div class="cloud"></div>
+            <div class="cloud"></div>
+            <div class="cloud"></div>     
+        </div>
+        
+        <div class="stars">
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+        </div>
+        
+        <div class="mountain"></div>
+        
+        <div class="train-container">
+            <div class="train">
+                <div class="train-car head-car">
+                    <div class="windows">
+                        <div class="head-car-window"></div>
+                        <div class="w-left"></div>
+                        <div class="w-right"></div>
+                    </div>
+                    <div class="door"></div>
+                </div>
+                
+                <div class="train-car">
+                    <div class="windows">
+                        <div class="w-left"></div>
+                        <div class="w-right"></div>
+                    </div>
+                    <div class="door"></div>
+                    <div class="windows">
+                        <div class="w-left"></div>
+                        <div class="w-right"></div>
+                    </div>        
+                </div>  
+                
+                <div class="train-car">
+                    <div class="windows">
+                        <div class="w-left"></div>
+                        <div class="w-right"></div>
+                    </div>
+                    <div class="door"></div>
+                    <div class="windows">
+                        <div class="w-left"></div>
+                        <div class="w-right"></div>
+                    </div>        
+                </div>
+                
+                <div class="train-car">
+                    <div class="windows">
+                        <div class="w-left"></div>
+                        <div class="w-right"></div>
+                    </div>
+                    <div class="door"></div>
+                    <div class="windows">
+                        <div class="w-left"></div>
+                        <div class="w-right"></div>
+                    </div>        
+                </div>
+
+                <div class="train-car">
+                    <div class="windows">
+                        <div class="w-left"></div>
+                        <div class="w-right"></div>
+                    </div>
+                    <div class="door"></div>
+                    <div class="windows">
+                        <div class="w-left"></div>
+                        <div class="w-right"></div>
+                    </div>        
+                </div>
+
+                <div class="train-car">
+                    <div class="windows">
+                        <div class="w-left"></div>
+                        <div class="w-right"></div>
+                    </div>
+                    <div class="door"></div>
+                    <div class="windows">
+                        <div class="w-left"></div>
+                        <div class="w-right"></div>
+                    </div>        
+                </div>
+
+                <div class="train-car">
+                    <div class="windows">
+                        <div class="w-left"></div>
+                        <div class="w-right"></div>
+                    </div>
+                    <div class="door"></div>
+                    <div class="windows">
+                        <div class="w-left"></div>
+                        <div class="w-right"></div>
+                    </div>        
+                </div>
+
+                <div class="train-car">
+                    <div class="windows">
+                        <div class="w-left"></div>
+                        <div class="w-right"></div>
+                    </div>
+                    <div class="door"></div>
+                    <div class="windows">
+                        <div class="w-left"></div>
+                        <div class="w-right"></div>
+                    </div>        
+                </div>
+                
+                <div class="train-car end-car">
+                    <div class="door"></div>
+                    <div class="windows">          
+                        <div class="w-left"></div>
+                        <div class="w-right"></div>
+                        <div class="end-car-window"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="train-track">
+                <div class="ledge"></div>
+                <div class="pillar">
+                    <div class="pillar-left"></div>
+                    <div class="pillar-middle"></div>
+                    <div class="pillar-right"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- 内容层 -->
+    <div class="content">
+        <h1 id="txt"></h1>
+        <button id="getOn"><span>上车</span></button>
+    </div>
+    
+    <audio id="audio" src="../music/train1.mp3" autoplay="autoplay" type="audio/mp3"></audio>
+    <audio id="audioLeave" src="../music/train.mp3" type="audio/mp3"></audio>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="../js/train.js"></script>
+</body>
+</html>

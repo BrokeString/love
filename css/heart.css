@@ -1,0 +1,68 @@
+* {
+				cursor: pointer;
+			}
+
+			body {
+				background-color: beige;
+			}
+			p{
+				font-size: 30px;
+				color: #80c635;
+				
+			}
+			#countdown{
+				margin-top: 5em;
+				text-align: center;
+			}
+			#mes{
+				font-weight: 100;
+				font-size: 20px;
+				font-family: "华文行楷";
+				color: #000000;
+			}
+			li {
+			  display: inline-block;
+			  font-size: 1.5em;
+			  list-style-type: none;
+			  padding: 1em;
+			  text-transform: uppercase;
+			}
+			
+			li span {
+			  display: block;
+			  font-size: 4.5rem;
+			}
+
+
+            #count{
+				font-weight: 700;
+				color: #0D85D1;
+				font-size: 40px;
+			}
+			div {
+				text-align: center;
+				position: relative;
+				top: 7px;
+			}
+
+			.loveName {
+				color: red;
+				font-weight: bold;
+				font-size: 55px;
+				height: 120px;
+			}
+
+			.lTime {
+				/* width: 35%; */
+				margin: 0 auto;
+				text-align: center;
+				font-size: 30px;
+				color: #0FCECE;
+			}
+
+			#author {
+				position: absolute;
+				left: 75%;
+				top: 75%;
+				text-align: center;
+			}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		 <link rel="stylesheet" href="../css/platform4.css"/>
+		<style>
+			/* 炫酷效果样式 */
+			@keyframes glow {
+				0% { filter: drop-shadow(0 0 5px #ff6b9d); }
+				100% { filter: drop-shadow(0 0 30px #ff6b9d) drop-shadow(0 0 40px #ff6b9d); }
+			}
+			
+			.cool-effect {
+				animation: glow 1s ease-out forwards;
+			}
+		</style>
+	</head>
+	<body id="body">
+		<canvas id="petalCanvas"></canvas>
+		
+		<!-- 手写体容器 -->
+		<div class="handwriting-wrapper" style="display: none;">
+			<div id="hanzi-container" style="display: flex; justify-content: center; align-items: center; gap: 40px;">
+				<div id="di" style="width: 200px; height: 200px;"></div>
+				<div id="si" style="width: 200px; height: 200px;"></div>
+				<div id="zhan" style="width: 200px; height: 200px;"></div>
+			</div>
+		</div>
+		
+		<h1 id="txt" style="display: none;"></h1>
+		<button id="getOn">
+		<svg t="1776065882211" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="51784" width="200" height="200"><path d="M867.84 10.24H156.16C122.88 10.24 94.72 38.4 94.72 71.68v883.2c0 33.28 28.16 61.44 61.44 61.44h711.68c33.28 0 61.44-28.16 61.44-61.44V71.68c0-35.84-28.16-61.44-61.44-61.44zM506.88 1003.52H156.16c-28.16 0-48.64-23.04-48.64-48.64V71.68c0-28.16 23.04-48.64 48.64-48.64h350.72v980.48z m412.16-51.2c0 28.16-23.04 48.64-48.64 48.64H517.12V20.48h350.72c28.16 0 48.64 23.04 48.64 48.64v883.2zM268.8 596.48h130.56c25.6 0 46.08-20.48 46.08-46.08V168.96c0-25.6-20.48-46.08-46.08-46.08H268.8c-25.6 0-46.08 20.48-46.08 46.08v378.88c0 28.16 20.48 48.64 46.08 48.64zM235.52 168.96c0-20.48 15.36-35.84 35.84-35.84h130.56c20.48 0 35.84 15.36 35.84 35.84v378.88c0 20.48-15.36 35.84-35.84 35.84H268.8c-20.48 0-35.84-15.36-35.84-35.84V168.96z m517.12-46.08h-130.56c-25.6 0-46.08 20.48-46.08 46.08v378.88c0 25.6 20.48 46.08 46.08 46.08h130.56c25.6 0 46.08-20.48 46.08-46.08V168.96c0-25.6-20.48-46.08-46.08-46.08z m35.84 424.96c0 20.48-15.36 35.84-35.84 35.84h-130.56c-20.48 0-35.84-15.36-35.84-35.84V168.96c0-20.48 15.36-35.84 35.84-35.84h130.56c20.48 0 35.84 15.36 35.84 35.84v378.88z" fill="#FF6902" p-id="51785"></path><path d="M867.84 10.24H156.16C122.88 10.24 94.72 38.4 94.72 71.68v883.2c0 33.28 28.16 61.44 61.44 61.44h711.68c33.28 0 61.44-28.16 61.44-61.44V71.68c0-35.84-28.16-61.44-61.44-61.44z m-419.84 537.6c0 25.6-20.48 46.08-46.08 46.08H268.8c-25.6 0-46.08-20.48-46.08-46.08V168.96c0-25.6 20.48-46.08 46.08-46.08h130.56c25.6 0 46.08 20.48 46.08 46.08v378.88z m350.72 0c0 25.6-20.48 46.08-46.08 46.08h-130.56c-25.6 0-46.08-20.48-46.08-46.08V168.96c0-25.6 20.48-46.08 46.08-46.08h130.56c25.6 0 46.08 20.48 46.08 46.08v378.88z" fill="#FF6902" opacity=".2" p-id="51786"></path></svg>
+		</button>
+		<audio id="audio" src="../music/train.mp3" autoplay="autoplay" type="audio/mp3" preload="auto"> </audio>
+		<audio id="audio1" src="../music/keyboard.mp3" type="audio/mp3" preload="auto"> </audio>
+		<audio id="audio2" src="../music/美人鱼.ogg" loop="loop" type="audio/mp3" preload="auto"> </audio>
+		<audio id="audio3" src="../music/train1.mp3" type="audio/mp3" preload="auto"> </audio>
+		<audio id="pencilAudio" src="../music/pencil.mp3" type="audio/mp3" preload="auto"> </audio>
+		
+		<!-- 引入HanziWrite库 -->
+		<script src="https://cdn.jsdelivr.net/npm/hanzi-writer@3.4.0/dist/hanzi-writer.min.js"></script>
+		 <script src="../js/platform4.js">
+		   </script>
+	</body>
+</html>

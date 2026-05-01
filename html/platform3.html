@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		 <link rel="stylesheet" href="../css/platform3.css"/>
+		<style>
+			/* 炫酷效果样式 */
+			@keyframes glow {
+				0% { filter: drop-shadow(0 0 5px #ff6b9d); }
+				100% { filter: drop-shadow(0 0 30px #ff6b9d) drop-shadow(0 0 40px #ff6b9d); }
+			}
+			
+			.cool-effect {
+				animation: glow 1s ease-out forwards;
+			}
+		</style>
+	</head>
+	<body id="body">
+		<canvas id="petalCanvas"></canvas>
+		
+		<!-- 手写体容器 -->
+		<div class="handwriting-wrapper" style="display: none;">
+			<div id="hanzi-container" style="display: flex; justify-content: center; align-items: center; gap: 40px;">
+				<div id="di" style="width: 200px; height: 200px;"></div>
+				<div id="san" style="width: 200px; height: 200px;"></div>
+				<div id="zhan" style="width: 200px; height: 200px;"></div>
+			</div>
+		</div>
+		
+		<h1 id="txt" style="display: none;"></h1>
+		<button id="getOn">
+			<svg t="1776065286074" class="icon" viewBox="0 0 1049 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="30240" width="200" height="200"><path d="M529.270947 589.997824s341.797606-3.342764 393.331882 245.693144l-97.218716 27.856366 16.435256 106.968444a272.156692 272.156692 0 0 1-123.125136-6.1284A285.806311 285.806311 0 0 1 529.270947 596.404788z" fill="#EFC0C4" p-id="30241"></path><path d="M563.81284 512.557127s167.138194-297.227421 408.931447-217.279651L947.116431 393.331882l100.840043 39.277476a274.106638 274.106638 0 0 1-66.855277 103.62568 285.527748 285.527748 0 0 1-413.667029-18.663765z" fill="#EFC0C4" p-id="30242"></path><path d="M507.542982 489.15778S264.078346 250.707291 403.638738 38.163221l88.304679 49.305767L557.127312 0a272.156692 272.156692 0 0 1 83.569097 91.368879 286.084875 286.084875 0 0 1-125.075081 395.003265z" fill="#EFC0C4" p-id="30243"></path><path d="M462.694233 529.270947S169.088139 702.258977 0 512.557127l70.476605-72.705114-67.969532-83.569097a271.599565 271.599565 0 0 1 109.75408-55.712731 285.806311 285.806311 0 0 1 349.040262 222.850925z" fill="#EFC0C4" p-id="30244"></path><path d="M473.558215 581.36235s91.647443 328.426551-135.381936 442.63765l-51.255713-86.633297-99.447225 43.45593a269.928183 269.928183 0 0 1-25.627857-120.339499 285.527748 285.527748 0 0 1 306.420022-278.563656z" fill="#EFC0C4" p-id="30245"></path></svg>
+		</button>
+		 <audio id="audio" src="../music/wind.mp3" autoplay="autoplay" type="audio/mp3" preload="auto"> </audio>
+		<audio id="audio1" src="../music/keyboard.mp3" type="audio/mp3" preload="auto"> </audio>
+		<audio id="audio2" src="../music/bohu.mp3" loop="loop" type="audio/mp3" preload="auto"> </audio>
+		<audio id="pencilAudio" src="../music/pencil.mp3" type="audio/mp3" preload="auto"> </audio>
+		
+		<!-- 引入HanziWrite库 -->
+		<script src="https://cdn.jsdelivr.net/npm/hanzi-writer@3.4.0/dist/hanzi-writer.min.js"></script>
+		 <script src="../js/platform3.js">
+		  
+		   </script>
+	</body>
+</html>

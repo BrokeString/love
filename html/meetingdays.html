@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>相识的日子</title>
+	<link rel="stylesheet" href="../css/meetingdays.css"/>
+	<link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=ZCOOL+QingKe+HuangYou&display=swap" rel="stylesheet">
+</head>
+<body>
+	<canvas id="particles"></canvas>
+	<div class="content">
+		<p id="text1"></p>
+		<h2 id="counter">第0天</h2>
+		<div class="heart-container">
+			<canvas id="heartCanvas" width="250" height="250"></canvas>
+			<p class="heart-text" id="heartText">心动值: 0%</p>
+		</div>
+		<div id="memories" class="memories"></div>
+		<p id="text2" style="display: none;"></p>
+		<button id="button">哦？说来与本姑娘听听</button>
+	</div>
+	<audio id="audio" src="../music/keyboard.mp3" autoplay="autoplay" type="audio/mp3"> </audio>
+		<audio id="bubblePop" src="../music/bubble-pop.mp3" preload="auto" type="audio/mp3"> </audio>
+		<audio id="bubbleAppear" src="../music/bubble-appear.mp3" preload="auto" type="audio/mp3"> </audio>
+		<audio id="backgroundMusic" src="../music/有点甜.mp3" autoplay="autoplay" loop="loop" type="audio/mp3" volume="0.3"> </audio>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+	<script src="../js/meetingdays.js"></script>
+</body>
+</html>

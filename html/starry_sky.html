@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>星河荡漾 - 动态星空</title>
+    <link rel="stylesheet" href="../css/starry_sky.css">
+</head>
+<body>
+    <canvas id="starryCanvas"></canvas>
+    <div class="controls">
+        <button id="toggleAnimation">暂停/播放</button>
+        <button id="resetStars">重置星星</button>
+        <div class="slider-container">
+            <label for="starDensity">星星密度:</label>
+            <input type="range" id="starDensity" min="50" max="500" value="200">
+        </div>
+        <div class="slider-container">
+            <label for="animationSpeed">动画速度:</label>
+            <input type="range" id="animationSpeed" min="1" max="10" value="3">
+        </div>
+    </div>
+    
+    <script src="../js/starry_sky.js"></script>
+</body>
+</html>
